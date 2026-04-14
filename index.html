@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Saloni! 🎂</title>
+    <meta name="description" content="A special birthday surprise for the most amazing Saloni aka Celonyy! Happy 19th Birthday! 🎉">
+    <meta property="og:title" content="Happy Birthday Saloni! 🎂">
+    <meta property="og:description" content="A special birthday celebration for Celonyy turning 19!">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sparkle cursor trail canvas -->
+    <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-heart">♡</div>
+            <p class="loader-text">Preparing something special...</p>
+        </div>
+    </div>
+
+    <!-- Music Toggle -->
+    <button id="music-toggle" class="music-btn" aria-label="Toggle background music" title="Toggle Music">
+        <span class="music-icon">🎵</span>
+        <span class="music-off">✕</span>
+    </button>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1: HERO / LANDING
+    ═══════════════════════════════════════════ -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-gradient-bg"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+
+        <div class="hero-photo-wrapper">
+            <div class="hero-photo-glow"></div>
+            <img src="photos/hero.jpeg" alt="Saloni" class="hero-photo" loading="eager">
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-sparkle-text">✨ a special day for a special soul ✨</p>
+
+            <div class="hero-title-group">
+                <h1 class="hero-title">
+                    <span class="hero-line hero-line-1">Happy</span>
+                    <span class="hero-line hero-line-2">Birthday</span>
+                </h1>
+                <h2 class="hero-name">Saloni</h2>
+                <p class="hero-aka">aka <span class="cursive-accent">celonyy</span> 💕</p>
+            </div>
+
+            <div class="hero-age-badge">
+                <span class="age-label">Turning</span>
+                <span class="age-number">19</span>
+                <span class="age-heart">♡</span>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <p class="scroll-text">Scroll down for a journey through memories</p>
+            <div class="scroll-arrow-wrapper">
+                <span class="scroll-arrow">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2: JOURNEY INTRO
+    ═══════════════════════════════════════════ -->
+    <section id="intro" class="section intro-section">
+        <div class="intro-decos">
+            <span class="deco deco-heart float-1">♡</span>
+            <span class="deco deco-star float-2">✦</span>
+            <span class="deco deco-sparkle float-3">✨</span>
+            <span class="deco deco-star float-4">⋆</span>
+            <span class="deco deco-heart float-5">♡</span>
+        </div>
+        <div class="intro-content">
+            <p class="intro-text" id="intro-text">
+                Let me take you on a little journey through our friendship...
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3: CINEMATIC PHOTO REVEAL
+    ═══════════════════════════════════════════ -->
+    <section id="photo-reveal" class="section reveal-section">
+        <div class="reveal-container">
+            <img src="photos/closeup.jpeg" alt="Saloni" class="reveal-photo" loading="lazy">
+            <div class="reveal-overlay">
+                <p class="reveal-intro">This is</p>
+                <h2 class="reveal-name">Celonyy</h2>
+                <p class="reveal-sub">and today is <em>her</em> day ♡</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 4: PHOTO GALLERY
+    ═══════════════════════════════════════════ -->
+    <section id="gallery" class="section gallery-section">
+        <h2 class="section-heading">
+            <span class="heading-deco">✿</span>
+            A Few Favorites
+            <span class="heading-deco">✿</span>
+        </h2>
+
+        <div class="gallery-grid">
+            <!-- Polaroid 1: Spiderman -->
+            <div class="polaroid polaroid-1">
+                <div class="polaroid-frame">
+                    <div class="polaroid-img-wrapper">
+                        <img src="photos/spiderman.jpeg" alt="Superhero Saloni" loading="lazy">
+                    </div>
+                    <div class="polaroid-tape tape-left"></div>
+                    <p class="polaroid-caption">My little superhero 🕷️</p>
+                </div>
+            </div>
+
+            <!-- Polaroid 2: Outfit -->
+            <div class="polaroid polaroid-2">
+                <div class="polaroid-frame">
+                    <div class="polaroid-img-wrapper">
+                        <img src="photos/outfit.jpeg" alt="Saloni outfit" loading="lazy">
+                    </div>
+                    <div class="polaroid-tape tape-right"></div>
+                    <p class="polaroid-caption">Always slaying every look ✨</p>
+                </div>
+            </div>
+
+            <!-- Polaroid 3: Pink -->
+            <div class="polaroid polaroid-3">
+                <div class="polaroid-frame">
+                    <div class="polaroid-img-wrapper">
+                        <img src="photos/pink.jpeg" alt="Saloni in pink" loading="lazy">
+                    </div>
+                    <div class="polaroid-tape tape-center"></div>
+                    <p class="polaroid-caption">Pretty in pink 🌸</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5: PARALLAX SUNSET PHOTO
+    ═══════════════════════════════════════════ -->
+    <section id="parallax-photo" class="section parallax-section">
+        <div class="parallax-img-container">
+            <img src="photos/sunset.jpeg" alt="Sunset view" class="parallax-img" loading="lazy">
+        </div>
+        <div class="parallax-overlay"></div>
+        <div class="parallax-text-content">
+            <p class="parallax-quote">"Some friendships begin in the most unexpected places..."</p>
+            <p class="parallax-sub">...and become the most beautiful stories ✦</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 6: MEMORIES TIMELINE
+    ═══════════════════════════════════════════ -->
+    <section id="memories" class="section memories-section">
+        <h2 class="section-heading cursive-heading">Our Story</h2>
+        <p class="section-subheading">a timeline of us ♡</p>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Entry 1 -->
+            <div class="timeline-entry tl-left">
+                <div class="timeline-dot">
+                    <span class="dot-inner"></span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2022</span>
+                    <h3 class="timeline-title">Team Toxic ☠️</h3>
+                    <p class="timeline-desc">Met through a mutual friend in a banning team called "Team Toxic." Who knew this beautiful chaos would lead to something this special?</p>
+                </div>
+            </div>
+
+            <!-- Entry 2 -->
+            <div class="timeline-entry tl-right">
+                <div class="timeline-dot">
+                    <span class="dot-inner"></span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2022 — 2023</span>
+                    <h3 class="timeline-title">The Early Chats 💬</h3>
+                    <p class="timeline-desc">Started talking, getting to know each other. Those first conversations that planted the seeds of a real friendship.</p>
+                </div>
+            </div>
+
+            <!-- Entry 3 -->
+            <div class="timeline-entry tl-left">
+                <div class="timeline-dot">
+                    <span class="dot-inner"></span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-year">Jan 2023 — Dec 2024</span>
+                    <h3 class="timeline-title">The Silent Chapter 🤫</h3>
+                    <p class="timeline-desc">Life got busy. We went quiet. But the connection? It was always there, just waiting for the right moment to spark again.</p>
+                </div>
+            </div>
+
+            <!-- Entry 4 -->
+            <div class="timeline-entry tl-right">
+                <div class="timeline-dot">
+                    <span class="dot-inner"></span>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-img">
+                        <img src="photos/jacket.jpeg" alt="Saloni" loading="lazy">
+                    </div>
+                    <span class="timeline-year">December 2024</span>
+                    <h3 class="timeline-title">The Comeback ♡</h3>
+                    <p class="timeline-desc">Reconnected like no time had passed at all. And this time? We never stopped talking. Some bonds are just unbreakable.</p>
+                </div>
+            </div>
+
+            <!-- Entry 5 -->
+            <div class="timeline-entry tl-left">
+                <div class="timeline-dot">
+                    <span class="dot-inner"></span>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2025 — Present</span>
+                    <h3 class="timeline-title">Chess Wars ♟️</h3>
+                    <p class="timeline-desc">"e4... Nf3... Qxd5!" — From online matches to setting up real chess boards and calling out coordinates over the phone. Who even needs a chess app when you have us?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 7: PHOTO SHOWCASE GRID
+    ═══════════════════════════════════════════ -->
+    <section id="photo-grid" class="section photo-grid-section">
+        <div class="showcase-grid">
+            <div class="showcase-item showcase-large">
+                <img src="photos/heart.jpeg" alt="Saloni making heart" loading="lazy">
+                <div class="showcase-overlay">
+                    <span class="showcase-emoji">♡</span>
+                </div>
+            </div>
+            <div class="showcase-item showcase-tall">
+                <img src="photos/neon.jpeg" alt="Saloni neon" loading="lazy">
+                <div class="showcase-overlay">
+                    <span class="showcase-emoji">✨</span>
+                </div>
+            </div>
+            <div class="showcase-item showcase-wide">
+                <img src="photos/flash.jpeg" alt="Saloni mirror" loading="lazy">
+                <div class="showcase-overlay">
+                    <span class="showcase-emoji">📸</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 8: THINGS I LOVE ABOUT YOU
+    ═══════════════════════════════════════════ -->
+    <section id="love-section" class="section love-section">
+        <h2 class="section-heading cursive-heading">Things I Love About You</h2>
+
+        <div class="love-grid">
+            <div class="love-card" data-dir="left">
+                <div class="love-icon">♟️</div>
+                <h3 class="love-title">Chess Player</h3>
+                <p class="love-desc">The way you play chess... it's seriously impressive. Not many people have that kind of strategic mind. Our chess battles are legendary.</p>
+                <div class="love-card-glow"></div>
+            </div>
+
+            <div class="love-card" data-dir="right">
+                <div class="love-icon">💻</div>
+                <h3 class="love-title">Hacker Vibes</h3>
+                <p class="love-desc">Your interest in hacking and all that tech stuff? That's genuinely cool. We share the same curiosity about how things work behind the scenes.</p>
+                <div class="love-card-glow"></div>
+            </div>
+
+            <div class="love-card" data-dir="left">
+                <div class="love-icon">😂</div>
+                <h3 class="love-title">That Humor</h3>
+                <p class="love-desc">Your sense of humor is on another level. Way better than anyone else's. Every conversation just feels easy and effortlessly fun with you.</p>
+                <div class="love-card-glow"></div>
+            </div>
+
+            <div class="love-card" data-dir="right">
+                <div class="love-icon">🧠</div>
+                <h3 class="love-title">The Intelligence</h3>
+                <p class="love-desc">Smart, sharp, and absolutely brilliant. You don't even realize how amazing that brain of yours truly is.</p>
+                <div class="love-card-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 9: SPECIAL MESSAGE
+    ═══════════════════════════════════════════ -->
+    <section id="special-message" class="section message-section">
+        <div class="message-gradient-bg"></div>
+        <div class="floating-hearts-container" id="floating-hearts"></div>
+
+        <div class="message-wrapper">
+            <h2 class="message-heading">A Little Note For You ♡</h2>
+
+            <div class="message-card">
+                <div class="message-body" id="message-body">
+                    <p class="msg-line">Hey Celonyy,</p>
+                    <p class="msg-line">On your 19th birthday, I just want you to know how glad I am that Team Toxic brought us together. From random chats to chess wars to everything in between — you've made my life so much more interesting and fun.</p>
+                    <p class="msg-line">You're one of those rare people who can make anyone smile without even trying. Your vibe, your humor, your intelligence — everything about you is just... different. In the best way possible.</p>
+                    <p class="msg-line">Here's to more late-night conversations, more chess battles where I totally win (okay fine, sometimes you do 😂), and more of your amazingly terrible jokes that somehow always make me laugh.</p>
+                    <p class="msg-line">Happy Birthday, Saloni. You deserve the entire world and more. ♡</p>
+                    <p class="msg-line msg-signature">— Your bestfriend 💕</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 10: SURPRISE TEASE
+    ═══════════════════════════════════════════ -->
+    <section id="surprise-tease" class="section tease-section">
+        <div class="tease-wrapper">
+            <p class="tease-line tease-1">Keep scrolling...</p>
+            <p class="tease-line tease-2">Almost there... 🎁</p>
+            <p class="tease-line tease-3">Are you ready? ✨</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 11: THE BIG SURPRISE
+    ═══════════════════════════════════════════ -->
+    <section id="surprise" class="section surprise-section">
+        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+        <div class="surprise-content">
+            <!-- CSS Birthday Cake -->
+            <div class="cake-wrapper">
+                <div class="cake">
+                    <div class="candle-row">
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                    </div>
+                    <div class="cake-layer cake-top-layer">
+                        <div class="icing icing-top"></div>
+                        <div class="drip drip-1"></div>
+                        <div class="drip drip-2"></div>
+                        <div class="drip drip-3"></div>
+                        <div class="drip drip-4"></div>
+                    </div>
+                    <div class="cake-layer cake-mid-layer">
+                        <div class="icing icing-mid"></div>
+                        <div class="drip drip-5"></div>
+                        <div class="drip drip-6"></div>
+                        <div class="drip drip-7"></div>
+                    </div>
+                    <div class="cake-layer cake-bottom-layer">
+                        <div class="icing icing-bottom"></div>
+                    </div>
+                    <div class="cake-plate"></div>
+                </div>
+            </div>
+
+            <h1 class="surprise-title" id="surprise-title">Happy 19th Birthday!</h1>
+            <h2 class="surprise-name" id="surprise-name">Celonyy 🎂🎉</h2>
+            <p class="surprise-date">✦ April 15, 2026 ✦</p>
+
+            <button id="wish-btn" class="wish-btn">
+                <span class="wish-icon">✨</span>
+                Make a Wish
+                <span class="wish-icon">✨</span>
+            </button>
+
+            <p class="wish-result" id="wish-result"></p>
+
+            <!-- Final collage -->
+            <div class="final-collage" id="final-collage">
+                <div class="collage-item ci-1"><img src="photos/hero.jpeg" alt="Saloni" loading="lazy"></div>
+                <div class="collage-item ci-2"><img src="photos/closeup.jpeg" alt="Saloni" loading="lazy"></div>
+                <div class="collage-item ci-3"><img src="photos/spiderman.jpeg" alt="Saloni" loading="lazy"></div>
+                <div class="collage-item ci-4"><img src="photos/pink.jpeg" alt="Saloni" loading="lazy"></div>
+                <div class="collage-item ci-5"><img src="photos/sunset.jpeg" alt="Sunset" loading="lazy"></div>
+                <div class="collage-item ci-6"><img src="photos/heart.jpeg" alt="Saloni" loading="lazy"></div>
+            </div>
+
+            <p class="footer-love">Made with ♡ for the birthday girl</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
