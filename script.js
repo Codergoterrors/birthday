@@ -539,9 +539,9 @@ function initSurpriseSection() {
     });
 
     // Footer
-    gsap.to('.footer-love', {
+    gsap.to('.footer-credit', {
         scrollTrigger: {
-            trigger: '.footer-love',
+            trigger: '.footer-credit',
             start: 'top 90%',
             toggleActions: 'play none none reverse'
         },
@@ -744,22 +744,6 @@ function initCursorSparkles() {
 
     animateSparkles();
 }
-
-
-/* ═══════════════════════════════════════════
-            MUSIC TOGGLE (Placeholder)
-   ═══════════════════════════════════════════ */
-
-document.getElementById('music-toggle').addEventListener('click', function() {
-    this.classList.toggle('playing');
-    // When user adds a music file, uncomment these:
-    // const audio = document.getElementById('bg-music');
-    // if (this.classList.contains('playing')) {
-    //     audio.play();
-    // } else {
-    //     audio.pause();
-    // }
-});
 
 
 /* ═══════════════════════════════════════════
